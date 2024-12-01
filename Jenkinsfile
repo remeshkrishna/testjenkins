@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('fetch git') {
       steps {
-        git(url: 'https://github.com/remeshkrishna/testjenkins.git', branch: 'main')
+        git(url: 'https://github.com/remeshkrishna/testjenkins.git', branch: 'main', credentialsId: 'GIT_PAT')
       }
     }
 
